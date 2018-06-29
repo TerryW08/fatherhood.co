@@ -1,0 +1,22 @@
+{% capture layout %}{% if page.layout %}{{ page.layout }}{% endif %}{% endcapture %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ page.meta_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="{{ page.meta_keywords }}">
+    <meta name="description" content="{{ page.meta_description }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500|Ubuntu:300,400,600">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/vendor/normalize-8.0.0.min.css">
+    <link rel="stylesheet" href="/css/vendor/gridlex-2.7.1.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="mobile-menu-hidden {{ layout }}">
+
+{% include header.html %}
+
+{% if layout != 'package' %}
+    {% include hero.html %}
+{% endif %}

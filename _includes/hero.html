@@ -1,0 +1,13 @@
+{% if page.url == "/" %}
+    <section id="hero" class="hero grid-middle-noBottom-noGutter">
+        <div class="col-12 text-center">
+            <h4 class="text-uppercase">Seven days<br><span>that last a lifetime</span></h4>
+        </div>
+    </section>
+{% elsif page.url != "/" %}
+    <section id="hero-small" class="hero grid-middle-noBottom-noGutter" style="background-image: url('{{ page.hero_image }}');">
+        <div class="col-12 text-center">
+            <h1 class="text-uppercase">{{ page.hero_title }}</h1>
+        </div>
+    </section>
+{% endif %}
